@@ -1,0 +1,33 @@
+Exercice 1
+
+Pile ou face :
+
+P(pile et pile)
+
+Exercice 2
+
+Dé :
+
+P(nombre pair)
+
+Exercice 3
+
+P(A) = 0.4
+P(B) = 0.5
+
+indépendants :
+
+P(A et B) ?
+
+Exercice 4
+
+Donner :
+
+un exemple exclusif
+un exemple indépendant
+🚀 MINI PRATIQUE
+
+Simuler :
+
+1000 lancers de pièce
+compter fréquence pile

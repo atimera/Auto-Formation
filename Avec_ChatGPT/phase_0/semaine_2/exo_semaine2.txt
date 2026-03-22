@@ -1,0 +1,263 @@
+Exercice 1
+-----------
+
+Donner la dimension :
+
+[
+[1,2,3],
+[4,5,6]
+]
+
+résponse : dimension = (2,3)
+
+Exercice 2
+----------
+Transposer :
+
+[
+[1,2],
+[3,4],
+[5,6]
+]
+
+réponse:
+[
+[1,3,5],
+[2,4,5],
+]
+
+
+Exercice 3
+-----------
+Multiplier :
+
+A = [
+[1,2],
+[3,4]
+]
+
+B = [
+[5,6],
+[7,8]
+]
+
+réponse : 
+A dimension (2,2)
+B dimension (2,2)
+A * B = 
+[
+[5,14],
+[18, 32]
+]
+
+Exercice 4 (important)
+----------------------
+Pourquoi une matrice représente un dataset ?
+
+réponse : Parce qu'une matrice est constitué de vecteurs : des données et des paramètres. 
+
+
+🚀 MINI PRATIQUE
+
+Créer :
+
+une matrice X (3x2)
+afficher shape
+faire transpose
+faire multiplication
+
+réponse : 
+
+import numpy as np
+
+# une matrice X (3x2)
+# afficher shape
+# faire transpose
+# faire multiplication
+
+X = np.array([
+    [1, 2],
+    [2, 3],
+    [3, 4]
+])
+
+Y = np.array([
+    [1,2,3],
+    [4,5,6]
+])
+
+print("X = \n", X)
+print("Shape de X = ", X.shape)
+print("Transposition de X = \n", X.T)
+print("Shape de Y = ", Y.shape)
+print("Multiplication matricielle X * Y = \n", np.dot(X, Y))
+
+output jupyter notebook:
+X = 
+ [[1 2]
+ [2 3]
+ [3 4]]
+Shape de X =  (3, 2)
+Transposition de X = 
+ [[1 2 3]
+ [2 3 4]]
+Shape de Y =  (2, 3)
+Multiplication matricielle X * Y = 
+ [[ 9 12 15]
+ [14 19 24]
+ [19 26 33]]
+
+
+
+Quelles differences entre X*Y, np.dot(X, Y) et np.matmul(X, Y) ?
+Dans la partie c'est marqué:
+Matrice (n, m)
+- n = lignes (observations)
+- m = colonnes (features)
+
+Qu'est-ce que cela veut dire ? Si une matrice est constituée de lignes et de colonnes, pour quoi les lignes seraient les données et les colonnes les paramètres ? Qu'en est-il d'un vecteur ?
+
+
+-------------------
+
+Consolidation : 
+
+Exercice 1
+A = [
+[2,3],
+[1,4]
+]
+
+B = [
+[1,2],
+[3,4]
+]
+
+👉 Calculer A × B
+
+Réponse : 
+[
+[(2*1+ 3*3), (2*2+3*4)],
+[(1*1+4*3), (1*2+4*4)]
+]
+=
+[
+[9, 16],
+[13, 18]
+]
+
+
+
+🔹 Exercice 2
+
+Donner la dimension de :
+
+X (5,3)
+W (3,1)
+
+👉 dimension de XW ?
+réponse : 
+dimension de XW = (5, 1) 
+Je pense que c'est ça mais je ne suis certains. Réexplique moi ça.
+
+🔹 Exercice 3 (concept)
+
+Explique clairement :
+
+👉 pourquoi on ne peut pas multiplier deux matrices n’importe comment
+
+réponse :
+Une matrice représente une liste d'individu (le ligne) et et une liste de paramètres. Si on inverse les multiplications ça n'aura pas de sens mathématiquement. 
+
+====================================================
+
+🧠 CORRECTION
+✅ Exercice 1
+
+Tu as fait :
+
+[
+[9, 16],
+[13, 18]
+]
+
+✔️ 100% correct
+
+👉 Tu maîtrises maintenant la multiplication matricielle.
+
+✅ Exercice 2 (dimension)
+
+Tu as répondu :
+
+(5,1)
+
+✔️ Correct
+
+🔁 Explication claire (à bien ancrer)
+X = (5,3)
+W = (3,1)
+
+👉 règle :
+
+(n, m) × (m, p) = (n, p)
+
+Donc :
+
+(5,3) × (3,1) = (5,1)
+🧠 Intuition ML
+5 lignes → 5 individus
+3 colonnes → 3 features
+
+W = poids (3 valeurs)
+
+👉 Résultat :
+
+5 prédictions (une par individu)
+
+👉 Donc (5,1)
+
+⚠️ Exercice 3 (concept)
+
+Ta réponse n’est pas fausse, mais elle manque de précision mathématique.
+
+❌ Ton idée actuelle :
+
+“ça n’a pas de sens mathématiquement”
+
+👉 vrai, mais incomplet
+
+✔️ Réponse correcte (niveau solide)
+
+👉 On ne peut pas multiplier deux matrices n’importe comment car :
+
+il faut que :
+nombre de colonnes de A = nombre de lignes de B
+🔁 Pourquoi ?
+
+Parce que :
+
+👉 chaque calcul =
+produit scalaire ligne × colonne
+
+❌ Exemple impossible :
+(2,3) × (2,2)
+
+👉 impossible car :
+
+3 ≠ 2
+
+👉 on ne peut pas aligner les valeurs
+
+✔️ Intuition simple
+
+👉 Tu fais correspondre :
+
+les features
+avec les poids
+🧠 Version ML
+X = données (n, m)
+W = poids (m, 1)
+
+👉 m doit correspondre sinon :
+
+modèle incohérent

@@ -1,0 +1,112 @@
+La procédure ci-dessus proposée me convient : 
+# 🧭 COMMENT ON VA PROCÉDER
+
+👉 Tu fais :
+- lecture
+- exercices
+- mini code
+
+👉 Tu reviens avec :
+- tes réponses
+- tes blocages (important)
+
+---
+
+# ⚙️ SUIVI (IMPORTANT)
+
+Je vais :
+- corriger
+- ajuster
+- décider quand tu passes à la suite
+
+----------------------------------------------------------------------------------
+
+Pour la suite, comment je dois te montrer des exercices et des livrables livrables ?
+
+Exercice 1
+----------
+
+Soit :
+v = [2, 4]
+w = [1, 3]
+
+Calculer :
+v + w
+3 × v
+v · w
+
+réponse :
+v + w = [2+1, 4+3] = [3, 7]
+3 * w = [3*1, 3*4] = [3, 12]
+v . w = (2*1) + (4*3) = 14
+
+
+Exercice 2
+-----------
+Un client :
+
+âge = 30
+achats = 5
+score = 0.9
+Écrire le vecteur
+Multiplier par 2
+Calculer produit scalaire avec : [1,1,1]
+
+réponse:
+vecteur client : c = [30, 5, 0.9]
+multiplier par 2 : c * 2 = 2 * [30, 5, 0.9] = [60, 10, 0.18]
+produit scalaire avec [1,1,1] : c . [1,1,1] = (1*30) + (1*5) + (1*0.9) = 30 + 5 + 0.9 = 35.9
+
+
+Exercice 3 (important):
+-----------------------
+Explique avec tes mots :
+👉 pourquoi un dataset = ensemble de vecteurs
+réponse : 
+Pour moi un dataset est un ensemble de données. Par exemple les données d'un client, d'un utilisateur, d'un individu présentées sous forme d'un vecteur. Donc les données d'un groupe d'individus, client, utilisateurs, etc est un dataset.
+
+
+MINI PRATIQUE
+--------------
+Créer un script Python :
+créer 2 vecteurs
+faire toutes les opérations
+afficher les résultats
+
+réponse : 
+import numpy as np
+
+a = np.array([20, 1, 0.5])
+b = np.array([10, 2, 0.2])
+
+print("produit scalaire", np.dot(a, b)) 
+print("multplication", a * b)
+print("multplication", 2 * a)
+print("addition", a + b)
+print("soustraction", a - b)
+
+# output notebook jupyter :
+produit scalaire 202.1
+multplication [2.e+02 2.e+00 1.e-01] # J'ignore comment il a fait cette multiplication.
+multplication [40.  2.  1.]
+addition [30.   3.   0.7]
+soustraction [10.  -1.   0.3]
+
+# Pourquoi on ne peux pas faire des opérations sur des vecteurs de taille differentes ?
+# Pourquoi produit scalaire sert à trouver des similarités ?
+
+----------------------
+Corrections / Retour 
+----------------------
+
+
+Exercice rapide:
+---------------
+Calculer :
+[1,2,3] · [4,5,6]
+Multiplier :
+4 × [2,3,1]
+
+réponses : 
+[1,2,3] · [4,5,6] = (1*4) + (2*5) + (3*6) = 4 + 10 + 18 = 32
+4 × [2,3,1] = [4*2, 4*3, 4*1] = [8, 12, 4]
